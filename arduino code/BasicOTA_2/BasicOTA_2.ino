@@ -1,10 +1,10 @@
-#include <ESP8266WiFi.h>
+  #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
-const char* ssid = "...";
-const char* password = "...";
+const char* ssid = "9a8fc8";
+const char* password = "278993750";
 
 void setup() {
   Serial.begin(9600);
