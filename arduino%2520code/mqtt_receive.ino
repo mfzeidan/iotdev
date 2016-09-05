@@ -7,7 +7,7 @@
 // Connect to the WiFi
 const char* ssid = "9a8fc8";
 const char* password = "278993750";
-const char* mqtt_server = "192.168.0.23";
+const char* mqtt_server = "67.205.148.211";
  
 WiFiClient espClient; 
 PubSubClient client(espClient);
@@ -25,12 +25,12 @@ void callback(char* topic, byte* payload, unsigned int length) {
   
   // ESP8266 Huzzah outputs are "reversed"
   digitalWrite(ledPin, HIGH);
-  pubMQTT("mqtt_test","light is off");}
+  pubMQTT("blah","light is off");}
   //Serial.println(" test");
   
   if (receivedChar == '1'){
    digitalWrite(ledPin, LOW);
-   pubMQTT("mqtt_test","light is on");
+   //pubMQTT("mqtt_test","light is on");
   }}
   Serial.println();
 }
@@ -44,7 +44,7 @@ void reconnect() {
  if (client.connect("ESP8266 Client")) {
   Serial.println("connected");
   // ... and subscribe to topic
-  client.subscribe("ledStatus");
+  client.subscribe("test123");
 
  } else {
   Serial.print("failed, rc=");
